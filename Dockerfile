@@ -11,5 +11,5 @@ RUN curl -O https://downloads.dcos.io/dcos-cli/install.sh
 COPY in.sh /dcos/in.sh
 RUN bash in.sh
 RUN source /dcos/bin/env-setup && dcos help
-CMD ["tail -f"]
+CMD ["tail -f tail -f /var/log/anaconda/syslog"]
 
